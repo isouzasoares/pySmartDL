@@ -481,6 +481,7 @@ class SmartDL:
         Stops the download.
         '''
         if self.status == "downloading":
+            self.status = "ready"
             self.thread_shared_cmds['stop'] = ""
             self._killed = True
 
